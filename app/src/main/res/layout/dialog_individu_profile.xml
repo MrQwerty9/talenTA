@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_id_ind_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_id_ind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No Tes"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_idpes_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_id_ind_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_idpes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID Peserta"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_name_psi_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_idpes_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_name_psi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Peserta"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_institution_psi_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name_psi_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_institution_psi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tempat/Tgl.Lahir"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_sipp_psi_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_institution_psi_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_sipp_psi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_study_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_sipp_psi_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_study"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pendidikan"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_purpose_test_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_study_layout"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_purpose_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tujuan Tes"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btn_individu_dialog_add_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_purpose_test_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_individu_dialog_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_purpose_test_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/btn_individu_dialog_add_update"
+            android:background="@color/transparent"
+            android:text="HAPUS"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_individu_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_purpose_test_layout"
+            android:layout_toLeftOf="@+id/btn_individu_dialog_delete"
+            android:background="@color/transparent"
+            android:text="BATAL"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

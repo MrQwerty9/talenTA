@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_name_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <TextView
+            android:id="@+id/tv_lbl_birth_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempat/Tgl Lahir"
+            android:textSize="10sp"
+            android:textColor="@color/greyLightLight"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_result"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_result"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_result"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <TextView
+            android:id="@+id/tv_birth_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_result"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_result"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_birth_result"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <TextView
+            android:id="@+id/tv_lbl_address_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textSize="10sp"
+            android:textColor="@color/greyLightLight"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_result"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_result"
+            app:layout_constraintTop_toBottomOf="@+id/tv_birth_result"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0"/>
+
+        <TextView
+            android:id="@+id/tv_address_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gresik"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_result"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_result"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_address_result"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bahasa"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_result"
+            app:layout_constraintTop_toTopOf="@+id/tv_name_result" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

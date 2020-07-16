@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="bar_title_selected_color">#909EAA</color>
+    <color name="color1">#98C2E4</color>
+    <color name="color2">#C4D9EA</color>
+    <color name="color3">#98C2E4</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="cbar_title_color">#ffffff</color>
+    <color name="cbar_title_txt_selected_color">#eaa</color>
+    <color name="cempty">#ffc1c1</color>
+    <color name="cpin_background">#2c2c65</color>
+    <color name="cpin_text">#DCDCDC</color>
+    <color name="cprogress">#8c9eff</color>
+    <color name="cprogress_click">#bbdefb</color>
+    <color name="cprogress_disable">@android:color/darker_gray</color>
+    <color name="greyLightLight">#ACACAC</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="link">#5BD0FF</color>
+    <color name="grey">#696969</color>
+    <color name="colorPdf">#FF6F64</color>
+</resources>

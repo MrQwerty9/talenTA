@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.InputActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_inteligensi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0"
+            android:layout_margin="10dp"
+            android:background="@color/color1">
+
+            <TextView
+                android:id="@+id/label_inteligensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aspek Inteligensi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+
+            <TextView
+                android:id="@+id/label_keputusan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/membuat_keputusan"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_inteligensi"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_keputusan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_keputusan"
+                app:layout_constraintStart_toStartOf="@+id/label_keputusan"
+                app:layout_constraintTop_toBottomOf="@+id/label_keputusan"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_dayapaham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/daya_paham"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_keputusan"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_dayapaham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_dayapaham"
+                app:layout_constraintStart_toStartOf="@+id/label_dayapaham"
+                app:layout_constraintTop_toBottomOf="@+id/label_dayapaham"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_logika"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logika_berpikir"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_dayapaham"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_logika"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_logika"
+                app:layout_constraintStart_toStartOf="@+id/label_logika"
+                app:layout_constraintTop_toBottomOf="@+id/label_logika"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_mengingat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mengingat"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_logika"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_mengingat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_mengingat"
+                app:layout_constraintStart_toStartOf="@+id/label_mengingat"
+                app:layout_constraintTop_toBottomOf="@+id/label_mengingat"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_berhitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/berhitung"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_mengingat"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_berhitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_berhitung"
+                app:layout_constraintStart_toStartOf="@+id/label_berhitung"
+                app:layout_constraintTop_toBottomOf="@+id/label_berhitung"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_berhitungritmis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/berhitung_ritmis"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_berhitung"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_berhitungritmis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_berhitungritmis"
+                app:layout_constraintStart_toStartOf="@+id/label_berhitungritmis"
+                app:layout_constraintTop_toBottomOf="@+id/label_berhitungritmis"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_analisasintesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analisa_sintesa"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_berhitungritmis"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_analisasintesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_analisasintesa"
+                app:layout_constraintStart_toStartOf="@+id/label_analisasintesa"
+                app:layout_constraintTop_toBottomOf="@+id/label_analisasintesa"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_daya_bayang_ruang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/daya_bayang_ruang"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_analisasintesa"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_daya_bayang_ruang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_daya_bayang_ruang"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/label_daya_bayang_ruang"
+                app:layout_constraintTop_toBottomOf="@+id/label_daya_bayang_ruang"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_sikap_kerja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/block_inteligensi"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/color2">
+
+            <TextView
+                android:id="@+id/label_aspek_sikap_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sikap Kerja"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/label_kecepatan_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kecepatan_kerja"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_aspek_sikap_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_kecepatan_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_kecepatan_kerja"
+                app:layout_constraintStart_toStartOf="@+id/label_kecepatan_kerja"
+                app:layout_constraintTop_toBottomOf="@+id/label_kecepatan_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/label_ketelitian_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ketelitian_kerja"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_kecepatan_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_ketelitian_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_ketelitian_kerja"
+                app:layout_constraintStart_toStartOf="@+id/label_ketelitian_kerja"
+                app:layout_constraintTop_toBottomOf="@+id/label_ketelitian_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_ketahanan_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ketahanan_kerja"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_ketelitian_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_ketahanan_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_ketahanan_kerja"
+                app:layout_constraintStart_toStartOf="@+id/label_ketahanan_kerja"
+                app:layout_constraintTop_toBottomOf="@+id/label_ketahanan_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_sistematika_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sistematika_kerja"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_ketahanan_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_sistematika_kerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_sistematika_kerja"
+                app:layout_constraintStart_toStartOf="@+id/label_sistematika_kerja"
+                app:layout_constraintTop_toBottomOf="@+id/label_sistematika_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_ketekunan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ketekunan"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_sistematika_kerja"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_ketekunan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_ketekunan"
+                app:layout_constraintStart_toStartOf="@+id/label_ketekunan"
+                app:layout_constraintTop_toBottomOf="@+id/label_ketekunan"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_kepribadian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/block_sikap_kerja"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/color3">
+
+            <TextView
+                android:id="@+id/label_kepribadian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aspek Kepribadian"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/label_stabilitas_emosi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stabilitas_emosi"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_kepribadian"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_stabilitas_emosi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_stabilitas_emosi"
+                app:layout_constraintStart_toStartOf="@+id/label_stabilitas_emosi"
+                app:layout_constraintTop_toBottomOf="@+id/label_stabilitas_emosi"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_tanggung_jawab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tanggung_jawab"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_stabilitas_emosi"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_tanggung_jawab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_tanggung_jawab"
+                app:layout_constraintStart_toStartOf="@+id/label_tanggung_jawab"
+                app:layout_constraintTop_toBottomOf="@+id/label_tanggung_jawab"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_kemandirian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kemandirian"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_tanggung_jawab"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_kemandirian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_kemandirian"
+                app:layout_constraintStart_toStartOf="@+id/label_kemandirian"
+                app:layout_constraintTop_toBottomOf="@+id/label_kemandirian"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_bersosialisasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bersosialisasi"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_kemandirian"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_bersosialisasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_bersosialisasi"
+                app:layout_constraintStart_toStartOf="@+id/label_bersosialisasi"
+                app:layout_constraintTop_toBottomOf="@+id/label_bersosialisasi"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/label_bekerja_sama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bekerja_sama"
+                android:textSize="@dimen/input_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spin_bersosialisasi"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spin_bekerja_sama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/label_bekerja_sama"
+                app:layout_constraintStart_toStartOf="@+id/label_bekerja_sama"
+                app:layout_constraintTop_toBottomOf="@+id/label_bekerja_sama"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp" />
+
+            <Button
+                android:id="@+id/btn_process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="proses"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spin_bekerja_sama"
+                app:layout_constraintStart_toStartOf="@+id/spin_bekerja_sama"
+                app:layout_constraintTop_toBottomOf="@+id/spin_bekerja_sama"
+                app:layout_constraintVertical_bias="0"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="150dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

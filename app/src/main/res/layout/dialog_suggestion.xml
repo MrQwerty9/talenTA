@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_label_suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Mohon maaf jika hasil ini tidak sesusai dengan semestinya, silahkan masukkan hasil yang seharusnya di kolom berikut. Kami akan mengevaluasi data nilai kemampuan ini."/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_name_psi_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_label_suggestion"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/et_name_psi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Saran atau hasil semestinya"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btn_individu_dialog_add_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name_psi_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_individu_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_individu_dialog_add_update"
+            android:layout_toLeftOf="@+id/btn_individu_dialog_delete"
+            android:background="@color/transparent"
+            android:text="BATAL"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

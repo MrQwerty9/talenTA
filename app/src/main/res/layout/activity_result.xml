@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.ResultActivity"
+    android:background="@color/colorPrimary">
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_id_individu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_lbl_id_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textColor="@color/greyLightLight"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/tv_id_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Individu 4"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lbl_id_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/tv_lbl_id_birth"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tempat/Tgl Lahir"
+                    android:textColor="@color/greyLightLight"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_id_name"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/tv_id_birth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jombang/01-01-1990"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_lbl_id_birth"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_id_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lbl_id_birth"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lbl_id_name"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_lbl_id_address"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textColor="@color/greyLightLight"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_id_birth"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/tv_id_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gubeng, Surabaya"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_lbl_id_address"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_id_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lbl_id_address"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lbl_id_birth"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                android:id="@+id/tv_lbl_id_notest"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="No Tes"
+                android:textColor="@color/greyLightLight"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_id_address"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/tv_id_notest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gubeng, Surabaya"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_lbl_id_notest"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_id_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lbl_id_notest"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lbl_id_address"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_lbl_id"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textColor="@color/greyLightLight"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_id_notest"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0"/>
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1112"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_lbl_id"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_id_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lbl_id"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lbl_id_notest"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.hadiidbouk.charts.ChartProgressBar
+                android:id="@+id/chartProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                app:hdBarCanBeClick="true"
+                app:hdBarHeight="220dp"
+                app:hdBarRadius="15dp"
+                app:hdBarTitleColor="@color/cbar_title_color"
+                app:hdBarTitleMarginTop="9dp"
+                app:hdBarTitleSelectedColor="@color/bar_title_selected_color"
+                app:hdBarTitleTxtSize="14sp"
+                app:hdBarWidth="27dp"
+                app:hdEmptyColor="@color/cempty"
+                app:hdMaxValue="10"
+                app:hdPinBackgroundColor="@color/cpin_background"
+                app:hdPinDrawable="@drawable/ic_mode_comment"
+                app:hdPinMarginBottom="55dp"
+                app:hdPinMarginEnd="22dp"
+                app:hdPinMarginTop="10dp"
+                app:hdPinPaddingBottom="5dp"
+                app:hdPinTextColor="@color/cpin_text"
+                app:hdPinTxtSize="17sp"
+                app:hdProgressClickColor="@color/cprogress_click"
+                app:hdProgressColor="@color/cprogress"
+                app:hdProgressDisableColor="@color/cprogress_disable" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conclusion_teknik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cate_teknik"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Teknik"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/subCate1_1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Scientific"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cate_teknik"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scientific"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate1_1"
+                    app:layout_constraintTop_toTopOf="@+id/subCate1_1" />
+
+                <TextView
+                    android:id="@+id/work1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate1_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate1_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work1_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scientificMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate1_1"
+                    app:layout_constraintTop_toTopOf="@+id/manCate1_1" />
+
+                <TextView
+                    android:id="@+id/womanCate1_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate1_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scientificWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate1_1"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate1_1" />
+
+                <TextView
+                    android:id="@+id/subCate2_1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Computational"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate1_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate2_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computational"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate2_1"
+                    app:layout_constraintTop_toTopOf="@+id/subCate2_1" />
+
+                <TextView
+                    android:id="@+id/work2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate2_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate2_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work2_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate2_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computationalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate2_1"
+                    app:layout_constraintTop_toTopOf="@+id/manCate2_1" />
+
+                <TextView
+                    android:id="@+id/womanCate2_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate2_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate2_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computationalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate2_1"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate2_1" />
+
+                <TextView
+                    android:id="@+id/subCate3_1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mechanical"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate2_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate3_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mechanical"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate3_1"
+                    app:layout_constraintTop_toTopOf="@+id/subCate3_1" />
+
+                <TextView
+                    android:id="@+id/work3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate3_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate3_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work3_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate3_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mechanicalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate3_1"
+                    app:layout_constraintTop_toTopOf="@+id/manCate3_1" />
+
+                <TextView
+                    android:id="@+id/womanCate3_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate3_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate3_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mechanicalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate3_1"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate3_1" />
+
+                <TextView
+                    android:id="@+id/subCate4_1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Outdoor"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate3_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate4_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/outdoor"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate4_1"
+                    app:layout_constraintTop_toTopOf="@+id/subCate4_1" />
+
+                <TextView
+                    android:id="@+id/work4_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate4_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate4_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work4_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate4_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/outdoorMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate4_1"
+                    app:layout_constraintTop_toTopOf="@+id/manCate4_1" />
+
+                <TextView
+                    android:id="@+id/womanCate4_1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate4_1"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate4_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/outdoorWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate4_1"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate4_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conclusion_bahasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chartProgressBar"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cate_bahasa"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bahasa"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/subCate1_2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Literary"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cate_bahasa"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/literary"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate1_2"
+                    app:layout_constraintTop_toTopOf="@+id/subCate1_2" />
+
+                <TextView
+                    android:id="@+id/work1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate1_2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate1_2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work1_2"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/literaryMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate1_2"
+                    app:layout_constraintTop_toTopOf="@+id/manCate1_2" />
+
+                <TextView
+                    android:id="@+id/womanCate1_2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate1_2"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/literaryWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate1_2"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate1_2" />
+
+                <TextView
+                    android:id="@+id/subCate2_2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Persuasive"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate1_2"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/persuasive"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate2_2"
+                    app:layout_constraintTop_toTopOf="@+id/subCate2_2" />
+
+                <TextView
+                    android:id="@+id/work2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate2_2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate2_2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work2_2"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/persuasiveMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate2_2"
+                    app:layout_constraintTop_toTopOf="@+id/manCate2_2" />
+
+                <TextView
+                    android:id="@+id/womanCate2_2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate2_2"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/persuasivewom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate2_2"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate2_2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conclusion_sosial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cate_sosial"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sosial"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/subCate1_3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clerical"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cate_sosial"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate1_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clerical"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate1_3"
+                    app:layout_constraintTop_toTopOf="@+id/subCate1_3" />
+
+                <TextView
+                    android:id="@+id/work1_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate1_3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate1_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work1_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate1_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clericalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate1_3"
+                    app:layout_constraintTop_toTopOf="@+id/manCate1_3" />
+
+                <TextView
+                    android:id="@+id/womanCate1_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate1_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate1_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clericalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate1_3"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate1_3" />
+
+                <TextView
+                    android:id="@+id/subCate2_3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Soial Service"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate1_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate2_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/social_service"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate2_3"
+                    app:layout_constraintTop_toTopOf="@+id/subCate2_3" />
+
+                <TextView
+                    android:id="@+id/work2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate2_3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate2_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work2_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate2_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/social_serviceMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate2_3"
+                    app:layout_constraintTop_toTopOf="@+id/manCate2_3" />
+
+                <TextView
+                    android:id="@+id/womanCate2_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate2_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate2_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/social_serviceWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate2_3"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate2_3" />
+
+                <TextView
+                    android:id="@+id/subCate3_3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Practical"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate2_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate3_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/practical"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate3_3"
+                    app:layout_constraintTop_toTopOf="@+id/subCate3_3" />
+
+                <TextView
+                    android:id="@+id/work3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate3_3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate3_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work3_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate3_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/practicalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate3_3"
+                    app:layout_constraintTop_toTopOf="@+id/manCate3_3" />
+
+                <TextView
+                    android:id="@+id/womanCate3_3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate3_3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate3_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/practicalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate3_3"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate3_3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conclusion_seni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cate_seni"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Seni"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/subCate1_4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Musical"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cate_seni"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate1_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/musical"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate1_4"
+                    app:layout_constraintTop_toTopOf="@+id/subCate1_4" />
+
+                <TextView
+                    android:id="@+id/work1_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate1_4"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate1_4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work1_4"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate1_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/musicalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate1_4"
+                    app:layout_constraintTop_toTopOf="@+id/manCate1_4" />
+
+                <TextView
+                    android:id="@+id/womanCate1_4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate1_4"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate1_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/musicalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate1_4"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate1_4" />
+
+                <TextView
+                    android:id="@+id/subCate2_4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Aesthetic"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descWomanSubCate1_4"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate2_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aesthetic"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate2_4"
+                    app:layout_constraintTop_toTopOf="@+id/subCate2_4" />
+
+                <TextView
+                    android:id="@+id/work2_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate2_4"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate2_4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work2_4"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate2_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aestheticMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate2_4"
+                    app:layout_constraintTop_toTopOf="@+id/manCate2_4" />
+
+                <TextView
+                    android:id="@+id/womanCate2_4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate2_4"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate2_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aestheticWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate2_4"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate2_4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conclusion_medikal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chartProgressBar"
+                android:visibility="gone">
+                
+                <TextView
+                    android:id="@+id/cate_medikal"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Medikal"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+                
+                <TextView
+                    android:id="@+id/subCate11_5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Medical"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cate_medikal"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descSubCate11_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medical"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/subCate11_5"
+                    app:layout_constraintTop_toTopOf="@+id/subCate11_5" />
+
+                <TextView
+                    android:id="@+id/work11_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descSubCate11_5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/manCate11_5"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pria"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/work11_5"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descManSubCate11_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medicalMan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/manCate11_5"
+                    app:layout_constraintTop_toTopOf="@+id/manCate11_5" />
+
+                <TextView
+                    android:id="@+id/womanCate11_5"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descManSubCate11_5"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/descWomanSubCate11_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medicalWom"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/womanCate11_5"
+                    app:layout_constraintTop_toTopOf="@+id/womanCate11_5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_savepdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPdf"
+                android:text="Simpan PDF"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/suggestion"
+                android:textColor="@color/link"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
